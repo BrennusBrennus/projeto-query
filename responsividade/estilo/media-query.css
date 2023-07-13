@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/* todas as mídias */
+
+/* Typical device breakpoints
+Pequenas telas: até 600px
+Mobiles: até 768px
+Tablets: até 1024px
+Desktops: até 1366px
+Televisores: acima de 1366px */
+
+@media print { 
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    }
+    body {
+        background-image: url(../imagens/back-print.jpg); /* desnecessário */
+    }
+
+    main {
+        border: 1px solid black;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#cel {
+        display: none;
+    }
+
+    img#tab {
+        display: none;
+    }
+
+    img#pri {
+        display: block;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h2::before {
+        content: 'Versão Smartphone e dispositivos menores';
+        color: white;
+        font-size: 1.2em;
+        text-shadow: 1px 1px 0px black;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    h2::before {
+        content: 'Versão Tablets';
+        color: white;
+        font-size: 2em;
+        text-shadow: 1px 1px 0px black;
+    }
+
+    img#cel {
+        display: none;
+    }
+
+    img#tab {
+        display: block;
+    }
+
+    img#pri {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1366px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    h2::before {
+        content: 'Versão Desktops';
+        color: white;
+        font-size: 2.7em;
+        text-shadow: 1px 1px 0px black;
+    }
+
+    img#cel {
+        display: none;
+    }
+
+    img#tab {
+        display: none;
+    }
+
+    img#pri {
+        display: none;
+    }
+
+    img#pc {
+        display: block;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+
+    /*telas grandes*/
+
+    main {
+        width: 700px;
+    }
+
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    h2::before {
+        content: 'Versão para telas maiores';
+        color: white;
+        font-size: 2.7em;
+        text-shadow: 1px 1px 0px black;
+    }
+
+    img#cel {
+        display: none;
+    }
+
+    img#tab {
+        display: none;
+    }
+
+    img#pri {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: block;
+    }
+}
